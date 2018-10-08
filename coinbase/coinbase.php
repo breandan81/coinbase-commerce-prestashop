@@ -164,7 +164,7 @@ class Coinbase extends PaymentModule {
         // Sets current value from DB to the form.
         $helper->fields_value['COINBASE_API_KEY'] = Configuration::get('COINBASE_API_KEY');
         $helper->fields_value['COINBASE_SANDBOX'] = Configuration::get('COINBASE_SANDBOX');
-        $helper->fields_value['COINBASE_SHARED_SECRET'] = Configuration::get('COINBASE_SHARED_SECERET');
+        $helper->fields_value['COINBASE_SHARED_SECRET'] = Configuration::get('COINBASE_SHARED_SECRET');
     
         return $helper->generateForm($fields_form);
     }

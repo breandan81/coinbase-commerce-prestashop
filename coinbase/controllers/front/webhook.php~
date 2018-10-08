@@ -139,7 +139,7 @@ class CoinbaseWebhookModuleFrontController extends ModuleFrontController {
     protected function validateRequest($payload) {
         // We calculate the HMAC Signature using our API Key. 
         // The requests header must match this to be a valid request.
-        $hash = hash_hmac("sha256", file_get_contents('php://input'), Configuration::get('COINBASE_SHARED_SECRET'));
+        $hash = hash_hmac("sha256", file_get_contents('php://input'), Configuration::get('COINBASE_API_KEY'));
 
         // Only validate hash if we are not in test mode.
         $testMode = (bool)Configuration::get('COINBASE_SANDBOX');
